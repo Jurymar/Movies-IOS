@@ -38,7 +38,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Configurar el searchBar
         searchBar.delegate = self
-        navigationItem.titleView = searchBar
         view.addSubview(searchBar)
         
         //llamo funcion addConstraints
@@ -98,8 +97,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         detailViewController.movieOverview = selectedMovie.overview
         detailViewController.releaseDate = selectedMovie.releaseDate
         
+        // Obtener el UINavigationController desde la propiedad navigationController
+        show(detailViewController, sender: nil)
         // Presentar el DetailViewController
-        present(detailViewController, animated: true, completion: nil)
+        //present(detailViewController, animated: true, completion: nil)
     }
     
     // UISearchBarDelegate
