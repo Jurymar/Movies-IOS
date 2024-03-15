@@ -23,6 +23,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Establecer el título del navigationItem
+        navigationItem.title = "Detalle"
+        
         view.backgroundColor = .white
         
         // Crear UIImageView para mostrar el póster
