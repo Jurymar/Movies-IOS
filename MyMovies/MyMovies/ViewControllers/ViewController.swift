@@ -41,6 +41,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         searchBar.placeholder = "Buscar peliculas"
         view.addSubview(searchBar)
         
+        // Configurar el título de la barra de navegación
+        self.title = "Populares"
+ 
         //llamo funcion addConstraints
         addConstraints()
         
