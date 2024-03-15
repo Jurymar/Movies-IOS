@@ -38,6 +38,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Configurar el searchBar
         searchBar.delegate = self
+        searchBar.placeholder = "Buscar peliculas"
         view.addSubview(searchBar)
         
         //llamo funcion addConstraints
