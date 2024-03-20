@@ -113,7 +113,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if searchText.isEmpty {
             filteredMovies = movies
         } else {
-            filteredMovies = movies.filter { $0.title.lowercased().contains(searchText.lowercased()) }
+            filteredMovies = movies.filter { movie in
+                let titleContainsSearchText = movie.title.lowercased().contains(searchText.lowercased())
+                let overviewContainsSearchText = movie.overview.lowercased().contains(searchText.lowercased())
+                let releaseDateContainsSearchText = movie.releaseDate.lowercased().contains(searchText.lowercased())
+                return titleContainsSearchText || overviewContainsSearchText || releaseDateContainsSearchText
+            }
         }
         collectionView.reloadData()
     }

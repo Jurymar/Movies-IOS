@@ -25,6 +25,9 @@ class DetailViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        // Establecer el título del navigationItem
+        self.title = movieTitle
+        
         // Crear UIImageView para mostrar el póster
         posterImageView = UIImageView()
         posterImageView.contentMode = .scaleAspectFit
