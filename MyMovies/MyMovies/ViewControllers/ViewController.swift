@@ -43,6 +43,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Configurar el título de la barra de navegación
         self.title = "Populares"
+        
+        // Cambiar el color de fondo de la barra de navegación
+        navigationController?.navigationBar.barTintColor = UIColor.black // Puedes cambiar el color aquí
+        
+        // Establecer el título del botón de retroceso como una cadena vacía
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        // Cambiar el color del botón de retroceso en la barra de navegación (back button)
+        navigationController?.navigationBar.tintColor = UIColor.white
  
         //llamo funcion addConstraints
         addConstraints()
